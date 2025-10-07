@@ -16,8 +16,8 @@ body {
   top: 38%; /* Move the card slightly upward */
   left: 50%;
   transform: translate(-50%, -50%) perspective(2500px);
-  width: 18.75rem; /* 300px to rem */
-  height: 25rem; /* 400px to rem */
+  width: 28.125rem; /* 300px to rem */
+  height: 36rem; /* 400px to rem */
   cursor: pointer;
   transform-style: preserve-3d;
   transition: 1s;
@@ -87,14 +87,14 @@ body {
 
 p {
   font-family: 'Montserrat', sans-serif;
-  margin: 0.625rem; /* 10px to rem */
+  margin: 0.45rem; /* 10px to rem */
   color: #333;
 }
 
 .name {
   position: absolute;
   left: 16rem; /* 150px to rem */
-  bottom: 0.2rem; /* Keep rem for consistency */
+  bottom: 0.1rem; /* Keep rem for consistency */
   color: #333;
 }
 

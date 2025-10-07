@@ -14,7 +14,7 @@ body {
 .birthdayCard {
   position: absolute;
   top: 38%; /* Move the card slightly upward */
-  left: 48%;
+  left: 50%;
   transform: translate(-50%, -50%) perspective(2500px);
   width: 18.75rem; /* 300px to rem */
   height: 25rem; /* 400px to rem */
@@ -46,7 +46,7 @@ body {
   position: relative;
   background-color: #fff;
   width: 28.125rem; /* 450px to rem */
-  height: 34.375rem; /* 550px to rem */
+  height: 36rem; /* 550px to rem */
   overflow: hidden;
   transform-origin: left;
   box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
@@ -59,7 +59,7 @@ body {
   position: absolute;
   background-color: #fff;
   width: 28.125rem; /* 450px to rem */
-  height: 34.375rem; /* 550px to rem */
+  height: 36rem; /* 550px to rem */
   z-index: -1;
   left: 0;
   top: 0;
@@ -94,7 +94,7 @@ p {
 .name {
   position: absolute;
   left: 16rem; /* 150px to rem */
-  bottom: 1rem; /* Keep rem for consistency */
+  bottom: 0.2rem; /* Keep rem for consistency */
   color: #333;
 }
 

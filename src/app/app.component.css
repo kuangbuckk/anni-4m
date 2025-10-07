@@ -1,0 +1,113 @@
+/* Set a modern font globally */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Keep vh for full height */
+  background-color: #073b4c;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Card container */
+.birthdayCard {
+  position: absolute;
+  top: 38%; /* Move the card slightly upward */
+  left: 48%;
+  transform: translate(-50%, -50%) perspective(2500px);
+  width: 18.75rem; /* 300px to rem */
+  height: 25rem; /* 400px to rem */
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+
+/* Hover or click flip effect */
+.birthdayCard:hover,
+.birthdayCard.opened {
+  transform: translate(-50%, -50%) perspective(2500px) rotate(0deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.birthdayCard:hover .cardFront,
+.birthdayCard.opened .cardFront {
+  transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .happy,
+.birthdayCard.opened .happy {
+  visibility: hidden;
+}
+
+/* Front face */
+.cardFront {
+  position: relative;
+  background-color: #fff;
+  width: 28.125rem; /* 450px to rem */
+  height: 34.375rem; /* 550px to rem */
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    30px 0 50px rgba(0, 0, 0, 0.4);
+  transition: 0.6s;
+}
+
+/* Inside face */
+.cardInside {
+  position: absolute;
+  background-color: #fff;
+  width: 28.125rem; /* 450px to rem */
+  height: 34.375rem; /* 550px to rem */
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+}
+
+/* Text styles */
+.happy {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  margin: 1.875rem; /* 30px to rem */
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  transition: 0.1s;
+  backface-visibility: visible;
+}
+
+.back {
+  font-family: Tahoma, sans-serif;
+  color: #333;
+  text-align: center;
+  margin: 0.3125rem; /* 5px to rem */
+  outline-color: #333;
+  outline-style: dotted;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0.625rem; /* 10px to rem */
+  color: #333;
+}
+
+.name {
+  position: absolute;
+  left: 16rem; /* 150px to rem */
+  bottom: 1rem; /* Keep rem for consistency */
+  color: #333;
+}
+
+/* Replace balloons with a single large red rose in the center */
+.balloons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10rem; /* Adjust size for the large rose */
+  height: 10rem;
+  background-image: url('/assets/red-rose.png'); /* Replace with red rose image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%; /* Optional for styling */
+}

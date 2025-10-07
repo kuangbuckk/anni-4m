@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Keep vh for full height */
+  background-color: #073b4c;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('/assets/top-view-tulip-collection.jpg');
+    background-size: cover;
+}
